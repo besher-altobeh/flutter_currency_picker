@@ -393,7 +393,7 @@ List<Map<String, dynamic>> currencies = [
   {
     "code": "AED",
     "name": "Emirati Dirham",
-    "symbol": "د.إ",
+    "symbol": "\u20C3",
     "flag": "AED",
     "decimal_digits": 2,
     "number": 784,
@@ -419,7 +419,7 @@ List<Map<String, dynamic>> currencies = [
   {
     "code": "SAR",
     "name": "Saudi Arabia Riyal",
-    "symbol": "﷼",
+    "symbol": "\u20C1",
     "flag": "SAR",
     "decimal_digits": 2,
     "number": 682,
