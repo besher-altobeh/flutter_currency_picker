@@ -76,4 +76,23 @@ class Currency {
         'thousands_separator': thousandsSeparator,
         'space_between_amount_and_symbol': spaceBetweenAmountAndSymbol,
       };
+
+   String? getFontFamily({
+    bool useSymbol = true,
+  }) {
+
+    if (!useSymbol) {
+      return null;
+    }
+
+    final upperCode = code.toUpperCase();
+    switch (upperCode) {
+      case 'SAR':
+        return "SARSymbol";
+      case 'AED':
+        return "AEDSymbol";
+      default:
+        return null;
+    }
+  }
 }

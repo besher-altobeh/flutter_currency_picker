@@ -17,6 +17,13 @@ dependencies:
 flutter:
   assets:
     - lib/src/res/
+  fonts:
+    - family: SARSymbol
+      fonts:
+        - asset: assets/fonts/sar-symbol.ttf
+    - family: AEDSymbol
+      fonts:
+        - asset: assets/fonts/aed-symbol.ttf
 
 dev_dependencies:
   flutter_test:

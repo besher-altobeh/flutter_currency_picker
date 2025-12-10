@@ -123,16 +123,17 @@ class _CurrencyListViewState extends State<CurrencyListView> {
           child: widget.showSearchField
               ? TextField(
                   controller: _searchController,
-                  decoration: widget.theme?.inputDecoration ?? InputDecoration(
-                    labelText: widget.searchHint ?? "Search",
-                    hintText: widget.searchHint ?? "Search",
-                    prefixIcon: const Icon(Icons.search),
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: const Color(0xFF8C98A8).withOpacity(0.2),
+                  decoration: widget.theme?.inputDecoration ??
+                      InputDecoration(
+                        labelText: widget.searchHint ?? "Search",
+                        hintText: widget.searchHint ?? "Search",
+                        prefixIcon: const Icon(Icons.search),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: const Color(0xFF8C98A8).withOpacity(0.2),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
                   onChanged: _filterSearchResults,
                 )
               : Container(),
@@ -162,7 +163,10 @@ class _CurrencyListViewState extends State<CurrencyListView> {
     final TextStyle subtitleTextStyle =
         widget.theme?.subtitleTextStyle ?? _defaultSubtitleTextStyle;
     final currencySignTextStyle =
-        widget.theme?.currencySignTextStyle ?? _defaultCurrencySignTextStyle;
+        (widget.theme?.currencySignTextStyle ?? _defaultCurrencySignTextStyle)
+            .copyWith(
+      fontFamily: currency.getFontFamily(),
+    );
 
     return Material(
       // Add Material Widget with transparent color
